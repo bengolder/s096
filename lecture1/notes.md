@@ -52,4 +52,4 @@ character, which is used to signal the end of the string.
 
 ## Header files
 
-Theyu aren't supposed ot have full decalrations of functions.
+They aren't supposed ot have full decalrations of functions.
