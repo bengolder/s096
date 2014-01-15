@@ -78,3 +78,73 @@ editing.
     } // asterisk is after typename
 
 
+## CPP Hello World
+
+    #include <cstdio>
+
+    int main() {
+      printf( "Hello, world!\n" );
+      return 0;
+    }
+
+## Better CPP Hello World
+
+    #include <iostream>
+
+    int main() {
+      std::cout << "Hello, world!\n";
+      return 0;
+    }
+
+The Standard Template Library (STL) has lots of great stuff
+basically everything I'd want.
+
+Generally you can compile C code with a C++ compiler.
+well-written C++ code will look pretty different from C
+C++ is more strongly typed. In C everything is passed by value or you pass a
+pointer (which itself is passed by value). If you pass a pointer to that
+function, the funciton can do whatever it wants to the data pointed to.
+
+Let's say you want to pass a pointer to an array to a function, but you only
+want to allow that function read access, not write access to the array. This
+is something you can do in C++.
+
+### pointers and references
+
+
+    // the way in C
+    void increment( int *a ) {
+      ++*a;
+    }
+    // later
+    int x = 5;
+    increment( &x );
+
+    // the way in C++
+    void increment( int &a ) {
+      // &a in the args is a reference to a
+      ++a;
+    }
+    int x = 5;
+    increment( x );
+
+`const` allows us to make demands that the compiler does certain things at
+compile time. The compiler will cause an error if you attempt to modify a
+variable declared with `const`.
+
+
+using `new` replaces `malloc()`.
+
+// the constructor can 
+MyClass::MyClass( int size ): _private1{ size }, _private2{ new double[size] } {
+    // constructor 
+
+}
+
+
+
+
+
+
+
+
